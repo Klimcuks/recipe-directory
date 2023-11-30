@@ -7,26 +7,28 @@ import { Home } from "./pages/home/Home";
 import Recipe from "./pages/recipe/Recipe";
 import { Search } from "./pages/search/Search";
 import Create from "./pages/create/Create";
+import Navbar from "./components/Navbar"
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <Navbar/>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home/>
           </Route>
 
-          <Route>
-            <Create path="/create" />
+          <Route path="/create">
+            <Create/>
           </Route>
 
           <Route path="/search">
-            <Search />
+            <Search/>
           </Route>
 
-          <Route path="/recipe">
-            <Recipe />
+          <Route path="/recipes/:id">
+            <Recipe/>
           </Route>
         </Switch>
       </BrowserRouter>
