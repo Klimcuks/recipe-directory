@@ -16,7 +16,7 @@ const Recipe = () => {
       <h2 className="page-title">{ recipe.title }</h2> 
       <p>takes{recipe.cookingTime}</p>
         <ul>
-          { recipe.ingredients.map(ing => <li>{ing}</li>)}
+          { recipe.ingredients.map(ing => <li key={ing}>{ing}</li>)}
         </ul>
         <p className="method">{ recipe.method }</p>
       </>}
